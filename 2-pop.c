@@ -22,12 +22,12 @@ void op_pop(stack_t **h, unsigned int l_num)
 }
 
 /**
- * swap - func swaps first and last elements' values
+ * op_swap - func swaps first and last elements' values
  * @h: dll head
  * @l: line number
  * Return: void
  */
-void swap(stack_t **h, unsigned int l_num)
+void op_swap(stack_t **h, unsigned int l_num)
 {
 	int value0;
 
