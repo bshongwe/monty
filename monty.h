@@ -40,9 +40,9 @@ typedef struct instruction_s
 } instruction_t;
 
 /* Task prototypes */
-void op_pall(stack **head, unsigned int l_num);
-int op_push(stack_t **h, char *line, unsigned int l_num);
-stack_t *add_node(stack_t **head, const int n);
-stack_t *add_node_end(stack_t **head, int n);
+void push(stack_t **stack, unsigned int line_cnt);
+void pall(stack_t **stack, unsigned int line_cnt __attribute__((unused)));
+
+void pint(stack_t **stack, unsigned int line_cnt);
 
 #endif /* end of MONTY_H file */
