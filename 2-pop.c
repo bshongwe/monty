@@ -22,18 +22,18 @@ void op_pop(stack_t **h, unsigned int l_num)
 }
 
 /**
- * swap - swap the values of the top and last elements
- * @h: head of the dll
+ * swap - func swaps first and last elements' values
+ * @h: dll head
  * @l: line number
- * opcode: swap
+ * Return: void
  */
-void swap(stack_t **h, unsigned int l)
+void swap(stack_t **h, unsigned int l_num)
 {
 	int value0;
 
 	if (!h || !*h)
 	{
-		printf("L%d: can't swap, %s too short\n", l, flag);
+		printf("L%d: can't swap, %s too short\n", l_num, flag);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
@@ -42,7 +42,7 @@ void swap(stack_t **h, unsigned int l)
 
 	if ((*h)->next == NULL)
 	{
-		printf("L%d: can't swap, %s too short\n", l, flag);
+		printf("L%d: can't swap, %s too short\n", l_num, flag);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
