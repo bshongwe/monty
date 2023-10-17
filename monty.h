@@ -2,7 +2,8 @@
 #define MONTY_H
 
 /* Libraries */
-#include <unistd.h>
+#include <unistd.hi>
+#include <stdlib.h>
 #include <stdio.h>
 
 /* for stack */
