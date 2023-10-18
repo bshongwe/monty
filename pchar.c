@@ -1,31 +1,29 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 #include "monty.h"
+ 
 /**
- * f_pchar - prints the char at the top of the stack,
- * followed by a new line
- * @head: stack head
- * @counter: line_number
- * Return: no return
+* pchar - prints the int at the top of the stack as char
+* @stack: stack given by main
+* @line_cnt: amount of lines
+*
+* Return: void
 */
-void f_pchar(stack_t **head, unsigned int counter)
+void pchar(stack_t **stack, unsigned int line_cnt)
 {
-	stack_t *h;
-
-	h = *head;
-	if (!h)
-	{
-		fprintf(stderr, "L%d: can't pchar, stack empty\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
-		exit(EXIT_FAILURE);
-	}
-	if (h->n > 127 || h->n < 0)
-	{
-		fprintf(stderr, "L%d: can't pchar, value out of range\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
-		exit(EXIT_FAILURE);
-	}
-	printf("%c\n", h->n);
+                if (!stack || !(*stack))
+                {
+                                fprintf(stderr, "L%d: can't pchar, stack empty\n", line_cnt);
+                                exit(EXIT_FAILURE);
+                                return;
+                }
+                if (isascii((*stack)->n) == 0)
+                {
+                                fprintf(stderr, "L%d: can't pchar, value out of range\n", line_cnt);
+                                exit(EXIT_FAILURE);
+                                return;
+                }
+                printf("%c\n", (*stack)->n);
 }
