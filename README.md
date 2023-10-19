@@ -19,3 +19,11 @@
 -	Don’t forget to push your header file
 -	All your header files should be include guarded
 -	You are expected to do the tasks in the order shown in the project
+
+## Compilation & Output
+Your code will be compiled this way:
+<code>$ gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty</code>
+-	Any output must be printed on stdout
+-	Any error message must be printed on stderr
+-	Here is a link to a GitHub repository (https://github.com/ku1ik/stderred) that could help you making sure your errors are printed on stderr
+
