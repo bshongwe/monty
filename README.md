@@ -121,449 +121,332 @@ Repo:
 
 		GitHub repository: monty
 
-/////// --------> will continue
+
 ## 2. pop
+
 mandatory
+
 Implement the pop opcode.
 
-The pop opcode
+<strong>The pop opcode</strong>
 
 The opcode pop removes the top element of the stack.
 
-Usage: pop
-If the stack is empty, print the error message L<line_number>: can't pop an empty stack, followed by a new line, and exit with the status EXIT_FAILURE
-julien@ubuntu:~/monty$ cat bytecodes/07.m 
-push 1
-push 2
-push 3
-pall
-pop
-pall
-pop
-pall
-pop
-pall
-julien@ubuntu:~/monty$ ./monty bytecodes/07.m 
-3
-2
-1
-2
-1
-1
-julien@ubuntu:~/monty$ 
+-	Usage: pop
+-	If the stack is empty, print the error message L<line_number>: can't pop an empty stack, followed by a new line, and exit with the status EXIT_FAILURE
+
 Repo:
 
-GitHub repository: monty
-   
-3. swap
+		GitHub repository: monty
+
+
+## Task 3. swap
+
 mandatory
+
 Implement the swap opcode.
 
-The swap opcode
+<strong>The swap opcode</strong>
 
 The opcode swap swaps the top two elements of the stack.
 
-Usage: swap
-If the stack contains less than two elements, print the error message L<line_number>: can't swap, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
-julien@ubuntu:~/monty$ cat bytecodes/09.m 
-push 1
-push 2
-push 3
-pall
-swap
-pall
-julien@ubuntu:~/monty$ ./monty bytecodes/09.m 
-3
-2
-1
-2
-3
-1
-julien@ubuntu:~/monty$ 
+-	Usage: swap
+-	If the stack contains less than two elements, print the error message L<line_number>: can't swap, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
+
 Repo:
 
-GitHub repository: monty
-   
-4. add
+		GitHub repository: monty
+
+
+## Task 4. add
+
 mandatory
+
 Implement the add opcode.
 
-The add opcode
+<strong>The add opcode</strong>
 
 The opcode add adds the top two elements of the stack.
 
-Usage: add
-If the stack contains less than two elements, print the error message L<line_number>: can't add, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
-The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
-The top element of the stack contains the result
-The stack is one element shorter
-julien@ubuntu:~/monty$ cat bytecodes/12.m 
-push 1
-push 2
-push 3
-pall
-add
-pall
+-	Usage: add
+-	If the stack contains less than two elements, print the error message L<line_number>: can't add, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
+-	The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
+	-	The top element of the stack contains the result
+	-	The stack is one element shorter
 
-julien@ubuntu:~/monty$ ./monty bytecodes/12.m 
-3
-2
-1
-5
-1
-julien@ubuntu:~/monty$
 Repo:
 
-GitHub repository: monty
-   
-5. nop
+		GitHub repository: monty
+
+
+## Task 5. nop
+
 mandatory
+
 Implement the nop opcode.
 
-The nop opcode
+<strong>The nop opcode</strong>
 
 The opcode nop doesn’t do anything.
 
-Usage: nop
+-	Usage: nop
+
 Repo:
 
-GitHub repository: monty
-   
-6. sub
+			GitHub repository: monty
+
+
+## Task 6. sub
 #advanced
+
 Implement the sub opcode.
 
-The sub opcode
+<strong>The sub opcode</strong>
 
 The opcode sub subtracts the top element of the stack from the second top element of the stack.
 
-Usage: sub
-If the stack contains less than two elements, print the error message L<line_number>: can't sub, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
-The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
-The top element of the stack contains the result
-The stack is one element shorter
-julien@ubuntu:~/monty$ cat bytecodes/19.m 
-push 1
-push 2
-push 10
-push 3
-sub
-pall
-julien@ubuntu:~/monty$ ./monty bytecodes/19.m 
-7
-2
-1
-julien@ubuntu:~/monty$
+-	Usage: sub
+-	If the stack contains less than two elements, print the error message L<line_number>: can't sub, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
+-	The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
+	-	The top element of the stack contains the result
+	-	The stack is one element shorter
+
 Repo:
 
-GitHub repository: monty
-   
-7. div
+		GitHub repository: monty
+
+
+## Task 7. div
 #advanced
+
 Implement the div opcode.
 
-The div opcode
+<strong>The div opcode</strong>
 
 The opcode div divides the second top element of the stack by the top element of the stack.
 
-Usage: div
-If the stack contains less than two elements, print the error message L<line_number>: can't div, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
-The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
-The top element of the stack contains the result
-The stack is one element shorter
-If the top element of the stack is 0, print the error message L<line_number>: division by zero, followed by a new line, and exit with the status EXIT_FAILURE
+-	Usage: div
+-	If the stack contains less than two elements, print the error message L<line_number>: can't div, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
+-	The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
+	-	The top element of the stack contains the result
+	-	The stack is one element shorter
+-	If the top element of the stack is 0, print the error message L<line_number>: division by zero, followed by a new line, and exit with the status EXIT_FAILURE
+
 Repo:
 
-GitHub repository: monty
-   
-8. mul
+		GitHub repository: monty
+
+
+## Task 8. mul
 #advanced
+
 Implement the mul opcode.
 
-The mul opcode
+<strong>The mul opcode</strong>
 
 The opcode mul multiplies the second top element of the stack with the top element of the stack.
 
-Usage: mul
-If the stack contains less than two elements, print the error message L<line_number>: can't mul, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
-The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
-The top element of the stack contains the result
-The stack is one element shorter
+-	Usage: mul
+-	If the stack contains less than two elements, print the error message L<line_number>: can't mul, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
+-	The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
+	-	The top element of the stack contains the result
+	-	The stack is one element shorter
+
 Repo:
 
-GitHub repository: monty
-   
-9. mod
+		GitHub repository: monty
+
+## Task 9. mod
 #advanced
+
 Implement the mod opcode.
 
-The mod opcode
+<strong>The mod opcode</strong>
 
 The opcode mod computes the rest of the division of the second top element of the stack by the top element of the stack.
 
-Usage: mod
-If the stack contains less than two elements, print the error message L<line_number>: can't mod, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
-The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
-The top element of the stack contains the result
-The stack is one element shorter
-If the top element of the stack is 0, print the error message L<line_number>: division by zero, followed by a new line, and exit with the status EXIT_FAILURE
+-	Usage: mod
+-	If the stack contains less than two elements, print the error message L<line_number>: can't mod, stack too short, followed by a new line, and exit with the status EXIT_FAILURE
+-	The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
+	-	The top element of the stack contains the result
+	-	The stack is one element shorter
+-	If the top element of the stack is 0, print the error message L<line_number>: division by zero, followed by a new line, and exit with the status EXIT_FAILURE
+
 Repo:
 
-GitHub repository: monty
-   
-10. comments
+		GitHub repository: monty
+
+
+## Task 10. comments
 #advanced
+
 Every good language comes with the capability of commenting. When the first non-space character of a line is #, treat this line as a comment (don’t do anything).
 
 Repo:
 
-GitHub repository: monty
-   
-11. pchar
+		GitHub repository: monty
+
+## Task 11. pchar
 #advanced
+
 Implement the pchar opcode.
 
-The pchar opcode
+<strong>The pchar opcode</strong>
 
 The opcode pchar prints the char at the top of the stack, followed by a new line.
 
-Usage: pchar
-The integer stored at the top of the stack is treated as the ascii value of the character to be printed
-If the value is not in the ascii table (man ascii) print the error message L<line_number>: can't pchar, value out of range, followed by a new line, and exit with the status EXIT_FAILURE
-If the stack is empty, print the error message L<line_number>: can't pchar, stack empty, followed by a new line, and exit with the status EXIT_FAILURE
-julien@ubuntu:~/monty$ cat bytecodes/28.m 
-push 72
-pchar
-julien@ubuntu:~/monty$ ./monty bytecodes/28.m 
-H
-julien@ubuntu:~/monty$
+-	Usage: pchar
+-	The integer stored at the top of the stack is treated as the ascii value of the character to be printed
+-	If the value is not in the ascii table (man ascii) print the error message L<line_number>: can't pchar, value out of range, followed by a new line, and exit with the status EXIT_FAILURE
+-	If the stack is empty, print the error message L<line_number>: can't pchar, stack empty, followed by a new line, and exit with the status EXIT_FAILURE
+
 Repo:
 
-GitHub repository: monty
-   
-12. pstr
+		GitHub repository: monty
+
+
+##Task 12. pstr
 #advanced
+
 Implement the pstr opcode.
 
-The pstr opcode
+<strong>The pstr opcode</strong>
 
 The opcode pstr prints the string starting at the top of the stack, followed by a new line.
 
-Usage: pstr
-The integer stored in each element of the stack is treated as the ascii value of the character to be printed
-The string stops when either:
-the stack is over
-the value of the element is 0
-the value of the element is not in the ascii table
-If the stack is empty, print only a new line
-julien@ubuntu:~/monty$ cat bytecodes/31.m 
-push 1
-push 2
-push 3
-push 4
-push 0
-push 110
-push 0
-push 108
-push 111
-push 111
-push 104
-push 99
-push 83
-pstr
-julien@ubuntu:~/monty$ ./monty bytecodes/31.m 
-School
-julien@ubuntu:~/monty$ 
+-	Usage: pstr
+-	The integer stored in each element of the stack is treated as the ascii value of the character to be printed
+-	The string stops when either:
+	-	the stack is over
+	-	the value of the element is 0
+	-	the value of the element is not in the ascii table
+-	If the stack is empty, print only a new line
+
 Repo:
 
-GitHub repository: monty
-   
-13. rotl
+		GitHub repository: monty
+
+
+## Task 13. rotl
 #advanced
+
 Implement the rotl opcode.
 
-The rotl opcode
+<strong>The rotl opcode</strong>
 
 The opcode rotl rotates the stack to the top.
 
-Usage: rotl
-The top element of the stack becomes the last one, and the second top element of the stack becomes the first one
-rotl never fails
-julien@ubuntu:~/monty$ cat bytecodes/35.m 
-push 1
-push 2
-push 3
-push 4
-push 5
-push 6
-push 7
-push 8
-push 9
-push 0
-pall
-rotl
-pall
-julien@ubuntu:~/monty$ ./monty bytecodes/35.m 
-0
-9
-8
-7
-6
-5
-4
-3
-2
-1
-9
-8
-7
-6
-5
-4
-3
-2
-1
-0
-julien@ubuntu:~/monty$ 
+-	Usage: rotl
+-	The top element of the stack becomes the last one, and the second top element of the stack becomes the first one
+-	rotl never fails
+
 Repo:
 
-GitHub repository: monty
-   
-14. rotr
+		GitHub repository: monty
+
+
+## Task 14. rotr
 #advanced
+
 Implement the rotr opcode.
 
-The rotr opcode
+<strong>The rotr opcode</strong>
 
 The opcode rotr rotates the stack to the bottom.
 
-Usage: rotr
-The last element of the stack becomes the top element of the stack
-rotr never fails
+-	Usage: rotr
+-	The last element of the stack becomes the top element of the stack
+-	rotr never fails
+
 Repo:
 
-GitHub repository: monty
-   
-15. stack, queue
+		GitHub repository: monty
+
+
+## Task 15. stack, queue
 #advanced
+
 Implement the stack and queue opcodes.
 
-The stack opcode
+<strong>The stack opcode</strong>
 
 The opcode stack sets the format of the data to a stack (LIFO). This is the default behavior of the program.
 
-Usage: stack
-The queue opcode
+-	Usage: stack
+
+<strong>The queue opcode</strong>
 
 The opcode queue sets the format of the data to a queue (FIFO).
 
-Usage: queue
+-	Usage: queue
+
 When switching mode:
 
-The top of the stack becomes the front of the queue
-The front of the queue becomes the top of the stack
-julien@ubuntu:~/monty$ cat bytecodes/47.m
-queue
-push 1
-push 2
-push 3
-pall
-stack
-push 4
-push 5
-push 6
-pall
-add
-pall
-queue
-push 11111
-add
-pall
-julien@ubuntu:~/monty$ ./monty bytecodes/47.m
-1
-2
-3
-6
-5
-4
-1
-2
-3
-11
-4
-1
-2
-3
-15
-1
-2
-3
-11111
-julien@ubuntu:~/monty$ 
+-	The top of the stack becomes the front of the queue
+-	The front of the queue becomes the top of the stack
+ 
 Repo:
 
-GitHub repository: monty
-   
-16. Brainf*ck
+		GitHub repository: monty
+
+
+## Task 16. Brainf*ck
 #advanced
+
 Write a Brainf*ck script that prints School, followed by a new line.
 
-All your Brainf*ck files should be stored inside the bf sub directory
-You can install the bf interpreter to test your code: sudo apt-get install bf
-Read: Brainf*ck
-julien@ubuntu:~/monty/bf$ bf 1000-school.bf 
-School
-julien@ubuntu:~/monty/bf$ 
+-	All your Brainf*ck files should be stored inside the bf sub directory
+-	You can install the bf interpreter to test your code: sudo apt-get install bf
+-	Read: Brainf*ck (https://en.wikipedia.org/wiki/Brainfuck)
+
 Repo:
 
-GitHub repository: monty
-Directory: bf
-File: 1000-school.bf
-   
-17. Add two digits
+		GitHub repository: monty
+		Directory: bf
+		File: 1000-school.bf
+
+
+## Task 17. Add two digits
 #advanced
+
 Add two digits given by the user.
 
-Read the two digits from stdin, add them, and print the result
-The total of the two digits with be one digit-long (<10)
-julien@ubuntu:~/monty/bf$ bf ./1001-add.bf
-81
-9julien@ubuntu:~/monty/bf$
+-	Read the two digits from stdin, add them, and print the result
+-	The total of the two digits with be one digit-long (<10)
+
 Repo:
 
-GitHub repository: monty
-Directory: bf
-File: 1001-add.bf
-   
-18. Multiplication
+		GitHub repository: monty
+		Directory: bf
+		File: 1001-add.bf
+
+
+##Task 18. Multiplication
 #advanced
+
 Multiply two digits given by the user.
 
-Read the two digits from stdin, multiply them, and print the result
-The result of the multiplication will be one digit-long (<10)
-julien@ubuntu:~/monty/bf$ bf 1002-mul.bf
-24
-8julien@ubuntu:~/monty/bf$
+-	Read the two digits from stdin, multiply them, and print the result
+-	The result of the multiplication will be one digit-long (<10)
+
 Repo:
 
-GitHub repository: monty
-Directory: bf
-File: 1002-mul.bf
-   
-19. Multiplication level up
+		GitHub repository: monty
+		Directory: bf
+		File: 1002-mul.bf
+
+
+## Task 19. Multiplication level up
 #advanced
+
 Multiply two digits given by the user.
 
+-	Read the two digits from stdin, multiply them, and print the result, followed by a new line
 
-
-
-Read the two digits from stdin, multiply them, and print the result, followed by a new line
-julien@ubuntu:~/monty/bf$ bf 1003-mul.bf 
-77
-49
-julien@ubuntu:~/monty/bf$ 
 Repo:
 
-GitHub repository: monty
-Directory: bf
-File: 1003-mul.bf
+		GitHub repository: monty
+		Directory: bf
+		File: 1003-mul.bf
+
+
